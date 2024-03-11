@@ -6,7 +6,9 @@ export default function GlobalError({}: GlobalErrorProps) {
   return (
     <html>
       <body>
-        <div>Something globally went wrong</div>
+        <div>
+          <p>Something globally went wrong</p>
+        </div>
       </body>
     </html>
   );
