@@ -1,19 +1,21 @@
-import DashboardCard from '@/app/components/dashboard-card';
+import React from 'react';
+import { getPromotions } from '@/lib/api';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableHeader from '@/app/components/summary-table-header';
+import DashboardCard from '@/app/components/dashboard-card';
 import SummaryTableCell from '@/app/components/summary-table-sell';
-import { getPromotions } from '@/lib/api';
+
 export interface PageProps {}
 
-export default async function page({}: PageProps) {
+export default async function Page({}: PageProps) {
   const data = await getPromotions();
-  
+
   return (
-    <DashboardCard label="Promotion">
+    <DashboardCard label="Promotions">
       <SummaryTable
         headers={
           <>
-            <SummaryTableHeader>Companie</SummaryTableHeader>
+            <SummaryTableHeader>Company</SummaryTableHeader>
             <SummaryTableHeader>Name</SummaryTableHeader>
             <SummaryTableHeader align="center">%</SummaryTableHeader>
           </>

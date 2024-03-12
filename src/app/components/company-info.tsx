@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 import StatusLabel from '@/app/components/status-label';
-import { getCompany } from '../lib/api';
+import { getCompany } from '@/lib/api';
 
 export interface CompanyInfoProps {
   companyId: string;
